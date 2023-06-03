@@ -1,0 +1,5 @@
+terraform_vpc/main.tf
+deployment/
+terraform_master_node/provider.tf
+terraform_vpc/provider.tf
+kubernetes_cluster_key.pem
