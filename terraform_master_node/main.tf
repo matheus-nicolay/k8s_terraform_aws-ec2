@@ -16,7 +16,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "kubernetes_master" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   key_name = "kubernetes_cluster_key" # Insira o nome da chave criada antes.
   subnet_id = var.subnet_public_id
   vpc_security_group_ids = [aws_security_group.permitir_ssh_http.id]
